@@ -13,5 +13,6 @@ A work in progress. Fetches but does not process data.
 
 ## Steps
 `yarn install`
+
 `node index.js`
 
