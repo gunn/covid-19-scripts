@@ -1,5 +1,8 @@
 # COVID-19 scripts
 
+## Status
+A work in progress. Fetches but does not process data.
+
 ## Goals
 * Get the most fine-grained data possible per region. Currently we have a county-level data for the US, but only a single figure for most other countries
 * For each region we get figures for, get up-to-date population data so we can generate per capita figures
@@ -10,4 +13,5 @@
 
 ## Steps
 `yarn install`
+`node index.js`
 
