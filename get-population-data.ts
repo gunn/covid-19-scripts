@@ -1,8 +1,8 @@
-const fetch = require("node-fetch")
-const csvtojson = require("csvtojson")
+import fetch from "node-fetch"
+import * as csvtojson from "csvtojson"
 
 
-async function getPopulationData(dateString) {
+async function getPopulationData() {
   const url = `https://www2.census.gov/programs-surveys/popest/datasets/2010-2019/counties/totals/co-est2019-alldata.csv`
 
   const resp = await fetch(url)
@@ -11,4 +11,4 @@ async function getPopulationData(dateString) {
   return csvtojson().fromString(data)
 }
 
-module.exports = getPopulationData
+export default getPopulationData

@@ -1,5 +1,5 @@
-const getPopulationData = require("./get-population-data")
-const getDataForDay     = require("./get-data-for-day")
+import getPopulationData from "./get-population-data"
+import getDataForDay     from "./get-data-for-day"
 
 
 async function combineDataSets () {

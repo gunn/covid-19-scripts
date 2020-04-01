@@ -1,5 +1,5 @@
-const fetch = require("node-fetch")
-const csvtojson = require("csvtojson")
+import fetch from "node-fetch"
+import * as csvtojson from "csvtojson"
 
 
 async function csvDataForDay(dateString) {
@@ -11,10 +11,10 @@ async function csvDataForDay(dateString) {
 }
 
 async function dataForDay(dateString) {
-  const csvData  = csvDataForDay(dateString)
+  const csvData  = await csvDataForDay(dateString)
   const jsonData = await csvtojson().fromString(csvData)
 
   return csvData
 }
 
-module.exports = dataForDay
+export default dataForDay
