@@ -1,11 +1,10 @@
-import fetch from "node-fetch"
+import fetchWithCache from "./fetch-with-cache"
 import * as csvtojson from "csvtojson"
 
 
 async function csvDataForDay(dateString) {
   const url = `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${dateString}.csv`
-  const resp = await fetch(url)
-  const data = await resp.text()
+  const data = await fetchWithCache(url, `csse-${dateString}.csv`)
 
   return data
 }
@@ -16,5 +15,6 @@ async function dataForDay(dateString) {
 
   return csvData
 }
+
 
 export default dataForDay
