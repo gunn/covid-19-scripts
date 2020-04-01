@@ -13,7 +13,7 @@ async function dataForDay(dateString) {
   const csvData  = await csvDataForDay(dateString)
   const jsonData = await csvtojson().fromString(csvData)
 
-  return csvData
+  return jsonData
 }
 
 

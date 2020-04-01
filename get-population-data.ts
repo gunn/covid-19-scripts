@@ -7,7 +7,9 @@ async function getPopulationData() {
 
   const data = await fetchWithCache(url, "pop.csv")
 
-  return csvtojson().fromString(data)
+  return csvtojson({
+    includeColumns: /(STATE|COUNTY|STNAME|CTYNAME|POPESTIMATE2019)/
+  }).fromString(data)
 }
 
 
