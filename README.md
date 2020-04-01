@@ -1,7 +1,7 @@
 # COVID-19 scripts
 
 ## Status
-A work in progress. Fetches but does not process data.
+A work in progress. Fetches data for all US counties and adds per 100,000 rates.
 
 ## Goals
 * Get the most fine-grained data possible per region. Currently we have a county-level data for the US, but only a single figure for most other countries
@@ -14,5 +14,4 @@ A work in progress. Fetches but does not process data.
 ## Steps
 `yarn install`
 
-`node index.js`
-
+`yarn start`
