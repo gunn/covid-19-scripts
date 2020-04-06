@@ -1,4 +1,4 @@
-import fetchWithCache from "./fetch-with-cache"
+import { fetchWithCache } from "./utils"
 import * as csvtojson from "csvtojson"
 
 
